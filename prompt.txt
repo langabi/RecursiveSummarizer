@@ -1,4 +1,4 @@
-Write a concise summary of the following:
+Write a concise summary of the following text snippet. Ignore partial sentences at the beginning or the end. Use multiple paragraphs for major distinct points.
 
 
 <<SUMMARY>>
