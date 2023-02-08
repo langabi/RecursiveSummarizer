@@ -10,7 +10,11 @@ Use OpenAI to summarise PDF documents of *any* length.
 
 The tool converts the PDF to text, splits it into chunks, and summarises each chunk. That makes a "long" summary. Then, it applies the same approach to product a much shorter summary, by summarising the summary. The result is a useful (though not perfect) summary of the main themes in a PDF of any length.
 
-## Using the script directly
+## Getting started
+
+Download the code, either by cloning, or even just click the big "Code" button above right, and then download the ZIP file.
+
+## Using the python script directly from the command line
 Needs an OpenAI API key, which can be provided either with a file called `openai_api_key.txt` in the same directory as the script, or by setting the environment variable `OPENAI_API_KEY`.
 
 Then, call `python3 recursive_summarizer.py <file> [<prompt>]` with the path to a PDF file as the first argument, and optionally the name of a prompt file as the second argument. Prompt files are in the /prompt/ folder, and are named after the type of prompt they use. Give the name of the prompt file without the .txt extension.
