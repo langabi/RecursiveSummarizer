@@ -13,8 +13,9 @@ def open_file(filepath):
 
 
 # get api key from environment variable OPENAI_API_KEY, or if no such variable, then from file openaiapikey.txt in the directory that this script is in
-openai.api_key = os.environ.get('OPENAI_API_KEY', open_file('openaiapikey.txt').strip())
-
+openai.api_key = os.environ.get('OPENAI_API_KEY')
+if openai.api_key is None:
+    openai.api_key = open_file('openaiapikey.txt')
 
 def save_file(content, filepath):
     with open(filepath, 'w', encoding='utf-8') as outfile:

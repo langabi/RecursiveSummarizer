@@ -59,7 +59,15 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>/usr/bin/python3 ~/dev/ai/RecursiveSummarizer/recursively_summarize.py "$@"
+					<string># Insert your API key here:
+export OPENAI_API_KEY="XXX"
+
+# Provide the full path to where recursively_summarize.py can be found (i.e., where you cloned the repo)
+INSTALL_PATH="XXX"
+for var in "$@"
+do
+	/usr/bin/python3 "$INSTALL_PATH"/recursively_summarize.py "$var"
+done
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -97,7 +105,7 @@
 				<key>OutputUUID</key>
 				<string>3FFB90BF-1ACA-445B-BB30-3E05CF19DA3D</string>
 				<key>ShowWhenRun</key>
-				<true/>
+				<false/>
 				<key>UUID</key>
 				<string>7E76E08D-42A6-4306-BD4A-AFA096350C61</string>
 				<key>UnlocalizedApplications</key>
@@ -172,12 +180,10 @@
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>451.500000:361.000000</string>
+				<string>451.500000:305.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -187,6 +193,17 @@
 	</array>
 	<key>connectors</key>
 	<dict/>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>5C745601-DC32-4E9A-BBA7-B4D08CCF10AD</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>Storage</string>
+		</dict>
+	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>applicationBundleID</key>
@@ -202,6 +219,8 @@
 		<array>
 			<string>/System/Library/CoreServices/Finder.app</string>
 		</array>
+		<key>backgroundColorName</key>
+		<string>blackColor</string>
 		<key>inputTypeIdentifier</key>
 		<string>com.apple.Automator.fileSystemObject.PDF</string>
 		<key>outputTypeIdentifier</key>
