@@ -1,0 +1,13 @@
+Write a list of all the people who are named below, where their behaviour seems likely to be considered incorrect. For each person, give the full name of the person, and a short paragraph summarising their actions.
+
+EXAMPLE OUTPUT:
+Joe Soap: Misappropriated cash from the municipality
+
+Michael Smith: Sent an email asking Ms Pillay to spend money that was not approved.
+
+
+CONTENT:
+
+<<SUMMARY>>
+
+RESPONSE:
